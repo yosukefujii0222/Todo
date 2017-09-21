@@ -7,10 +7,11 @@ class TodosController < ApplicationController
 
   def create
     @todo = Todo.new(todo_params)
-    if @todo.save
+     if @todo.save
       respond_to do |format|
-        format.html { redirect_to :root }
-        format.json { render json: @todo }
+        format.html { redierct_to :root }
+        format.json { render json: @todo}
+      end
     else
       render :index
     end
